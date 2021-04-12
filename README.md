@@ -9,17 +9,24 @@ const DEVELOPER_INFO = [
 ];
 ```
 
-## Dependencies:
+### Dependencies to install in Python:
 
-> *File: texto-para-fala.py*
+> *File: [textoParaFala.py](https://www.youtube.com/watch?v=OjoiJzg7Ags)*
 
 >> pip install gtts
 
 >> pip install playsound
 
-> *File: fala-para-texto.py*
+> *File: [falaParaTexto.py](https://www.youtube.com/watch?v=jUXjBTIWqKY)*
 
 >> pip install SpeechRecognition
 
 >> pip install pyaudio
 
+### Python main execution file
+
+> *File: [principal.py](https://www.youtube.com/watch?v=ZUqDb0H5OEc)*
+
+### PHP file that calls the [`Tuxi CLI`](https://www.youtube.com/watch?v=RXKWSZlJyY8) installed on the `WSL Ubuntu`
+
+> *File: tuxi.php*

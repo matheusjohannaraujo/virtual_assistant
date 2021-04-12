@@ -2,9 +2,10 @@
 
 import speech_recognition as sr
 
+print("\r\nMicrofones: " + str(sr.Microphone.list_microphone_names()) + "\r\n")
+
 def falaParaTexto(texto = "", max_contador = 5):    
     contador = 0
-    print("Microfones:", sr.Microphone.list_microphone_names())
     microfone = sr.Recognizer()
     with sr.Microphone() as canal:
         microfone.adjust_for_ambient_noise(canal)
@@ -12,11 +13,12 @@ def falaParaTexto(texto = "", max_contador = 5):
             try:
                 contador += 1
                 audio = microfone.listen(canal)
-                texto = microfone.recognize_google(audio, language = "pt-BR")
-                texto = texto.encode("utf8")
+                texto = microfone.recognize_google(audio, language = "pt-BR")                
                 break
             except Exception as e:
                 print("error:", e)
+    print("Entendi: " + texto)
+    texto = texto.encode("utf8")
     return texto
 
-# print("Entendi: " + falaParaTexto().decode("utf8"))
+# print(falaParaTexto().decode("utf8"))
